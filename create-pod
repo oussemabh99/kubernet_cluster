@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: webserver
+ namespace: devops
+ labels:
+  type: frontend
+  color: blue
+spec:
+ containers:
+   - name: nginx
+     image: nginx
+ 
