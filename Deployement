@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: rc1
+ namespace: devops
+ labels:
+  type: frontend
+  color: blue
+spec:
+ template:
+  metadata:
+   name: web_server
+   namespace: devops
+   labels:
+    type: frontend
+    color: black
+  spec:
+   containers:
+    - name: nginx
+      image: nginx
+ selector:
+  matchLabels:
+   type: frontend
+ replicas: 3
+
