@@ -8,4 +8,4 @@ kubectl create -f create-Replicaset
 echo "creting depolyement"
 kubectl create -f Deployement
 echo "creating service nodeport"
-kubectl create -f Service
+kubectl create -f service
